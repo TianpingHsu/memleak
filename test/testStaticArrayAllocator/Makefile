@@ -1,6 +1,6 @@
 
 default, all, measure:
-	g++ --std=c++17 -Wall Measure.cpp -g -o Measure
+	g++ --std=c++17 -Wall Measure.cpp -O3 -o Measure
 
 leakcheck:
 	g++ --std=c++17 -Wall Measure.cpp -O3 -o Measure

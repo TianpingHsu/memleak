@@ -124,7 +124,7 @@ void printTestStatus(const char *name, StlStaticArrayAllocatorContainer &stlCont
 int main()
 {
     typedef size_t DataType;
-    typedef POC::StaticArrayAllocator<DataType> MemoryPoolStaticArrayAllocator;
+    //typedef POC::StaticArrayAllocator<DataType> MemoryPoolStaticArrayAllocator;
     typedef POC::StaticArrayAllocator<std::map<DataType, DataType>::value_type> MapMemoryPoolStaticArrayAllocator;
 
     std::cout << "StaticArrayAllocator performance measurement example" << std::endl;
