@@ -21,12 +21,18 @@ extern "C" {
     void __real_free(void*);
 
     // c++filt: _Znwm ==> operator new(unsigned long)
-    void* __wrap__Znwm(unsigned long size);
+    void* __wrap__Znwm(std::size_t size);
     // c++filt _ZdlPv ==> operator delete(void*)
     void __wrap__ZdlPv(void* ptr);
+    // ===> operator new[](std::size_t)
+    void* __wrap__Znam(std::size_t);
+    // ===> operator delete[](void*)
+    void __wrap__ZdaPv(void*);
 
-    void* __real__Znwm(unsigned long size);
+    void* __real__Znwm(std::size_t size);
     void __real__ZdlPv(void* ptr);
+    void* __real__Znam(std::size_t);
+    void __real__ZdaPv(void*);
 }
 
 struct Node {
